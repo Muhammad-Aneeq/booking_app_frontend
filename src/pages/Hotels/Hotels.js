@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./Hotels.css";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
@@ -20,7 +20,9 @@ const Hotels = () => {
   const [max, setMax] = useState();
 
   const { data, isLoading, reFetch } = useFetch(
-    `http://localhost:8000/api/v1/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+    `https://booking-app-backend-hv7w.vercel.app/api/v1/hotels?city=${destination}&min=${
+      min || 0
+    }&max=${max || 999}`
   );
 
   const handleClick = () => {
@@ -115,7 +117,7 @@ const Hotels = () => {
               <>
                 {data.map((item) => (
                   <SearchItem item={item} key={item._id} />
-            ))}
+                ))}
               </>
             )}
           </div>

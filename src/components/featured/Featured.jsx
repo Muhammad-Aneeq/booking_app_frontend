@@ -1,13 +1,11 @@
 import "./Featured.css";
 import useFetch from "../../hooks/useFetch";
 
-
-
 const Featured = () => {
   const { data, isLoading } = useFetch(
-    "http://localhost:8000/api/v1/hotels/countByCity?cities=berlin,madrid,london"
+    "https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/countByCity?cities=berlin,madrid,london"
   );
-console.log("data",data)
+  console.log("data", data);
   return (
     <div className="featured">
       {isLoading ? (
@@ -43,7 +41,7 @@ console.log("data",data)
               className="featuredImg"
             />
             <div className="featuredTitles">
-            <h1>London</h1>
+              <h1>London</h1>
               <h2>{data[2]} properties</h2>
             </div>
           </div>

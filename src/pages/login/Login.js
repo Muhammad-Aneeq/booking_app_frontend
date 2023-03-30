@@ -24,7 +24,10 @@ const Login = () => {
     });
 
     try {
-      const { data } = await axios.post("http://localhost:8000/api/v1/auth/login", credentials);
+      const { data } = await axios.post(
+        "https://booking-app-backend-hv7w.vercel.app/api/v1/auth/login",
+        credentials
+      );
       if (data) {
         dispatch({ type: "LOGIN_SUCCESS", payload: data?.details });
         navigate("/");

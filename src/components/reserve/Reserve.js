@@ -9,7 +9,9 @@ import "./reserve.css";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const { seletedRooms, setSelectedRooms } = useState([]);
-  const { data } = useFetch(`http://localhost:8000/api/v1/hotels/room/${hotelId}`);
+  const { data } = useFetch(
+    `https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/room/${hotelId}`
+  );
   const { dates } = useSearchContext();
   const navigate = useNavigate();
 
@@ -56,7 +58,7 @@ const Reserve = ({ setOpen, hotelId }) => {
           const { data } = axios.put(`/rooms/availability/${roomId}`, {
             dates: allDates,
           });
-          console.log("data",data)
+          console.log("data", data);
           return data;
         })
       );

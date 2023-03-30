@@ -3,7 +3,9 @@ import "./PropertyList.css";
 import useFetch from "../../hooks/useFetch.js";
 
 const PropertyList = () => {
-  const { data, isLoading } = useFetch("http://localhost:8000/api/v1/hotels/countByType");   
+  const { data, isLoading } = useFetch(
+    "https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/countByType"
+  );
 
   const images = [
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",
@@ -25,14 +27,15 @@ const PropertyList = () => {
                 <img src={img} alt={img} className="pListImg" />
                 <div className="pListTitles">
                   <h1>{data[i]?.type}</h1>
-                  <h2>{data[i]?.count} {data[i]?.type}</h2>
+                  <h2>
+                    {data[i]?.count} {data[i]?.type}
+                  </h2>
                 </div>
               </div>
             ))}
         </>
       )}
     </div>
-
   );
 };
 
