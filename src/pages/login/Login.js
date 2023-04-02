@@ -25,7 +25,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "https://booking-app-backend-hv7w.vercel.app/api/v1/auth/login",
+        "https://bookingappcyclicbackend.up.railway.app/api/v1/auth/login",
         credentials
       );
       if (data) {

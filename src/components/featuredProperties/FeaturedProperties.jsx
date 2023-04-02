@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 const FeaturedProperties = () => {
   const { data, isLoading } = useFetch(
-    "https://booking-app-backend-hv7w.vercel.app/api/v1/hotels?featured=true&limit=4"
+    "https://bookingappcyclicbackend.up.railway.app/api/v1/hotels?featured=true&limit=4"
   );
   console.log("data", data);
 

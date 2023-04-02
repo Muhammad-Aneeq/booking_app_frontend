@@ -25,7 +25,7 @@ const Hotel = () => {
   const [openModal, setOpenModal] = useState(false);
   const [myData, setMyData] = useState();
   const { data, isLoading } = useFetch(
-    `https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/find/${id}`
+    `https://bookingappcyclicbackend.up.railway.app/api/v1/hotels/find/${id}`
   );
   const { user } = useAuthContext();
   const { date, options } = useSearchContext();

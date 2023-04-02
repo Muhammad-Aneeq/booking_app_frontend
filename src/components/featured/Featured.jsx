@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 
 const Featured = () => {
   const { data, isLoading } = useFetch(
-    "https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/countByCity?cities=berlin,madrid,london"
+    "https://bookingappcyclicbackend.up.railway.app/api/v1/hotels/countByCity?cities=berlin,madrid,london"
   );
   console.log("data", data);
   return (

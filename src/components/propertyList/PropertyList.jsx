@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch.js";
 
 const PropertyList = () => {
   const { data, isLoading } = useFetch(
-    "https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/countByType"
+    "https://bookingappcyclicbackend.up.railway.app/api/v1/hotels/countByType"
   );
 
   const images = [

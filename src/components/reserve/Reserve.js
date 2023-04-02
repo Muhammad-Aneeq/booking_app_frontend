@@ -10,7 +10,7 @@ import "./reserve.css";
 const Reserve = ({ setOpen, hotelId }) => {
   const { seletedRooms, setSelectedRooms } = useState([]);
   const { data } = useFetch(
-    `https://booking-app-backend-hv7w.vercel.app/api/v1/hotels/room/${hotelId}`
+    `https://bookingappcyclicbackend.up.railway.app/api/v1/hotels/room/${hotelId}`
   );
   const { dates } = useSearchContext();
   const navigate = useNavigate();

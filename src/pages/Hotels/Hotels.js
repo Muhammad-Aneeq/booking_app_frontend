@@ -20,7 +20,7 @@ const Hotels = () => {
   const [max, setMax] = useState();
 
   const { data, isLoading, reFetch } = useFetch(
-    `https://booking-app-backend-hv7w.vercel.app/api/v1/hotels?city=${destination}&min=${
+    `https://bookingappcyclicbackend.up.railway.app/api/v1/hotels?city=${destination}&min=${
       min || 0
     }&max=${max || 999}`
   );
